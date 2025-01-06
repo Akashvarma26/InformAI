@@ -1,3 +1,6 @@
+# All my envs and dirs
+ragvenv/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
