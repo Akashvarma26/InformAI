@@ -1,2 +1,2 @@
 # InformAI
-RAG Application using React and FastAPI.
+RAG Application using Frontend and FastAPI.
