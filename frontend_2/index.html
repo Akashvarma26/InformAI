@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InformAI - Intelligent RAG Assistant</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+            </div>
+            <h1>InformAI</h1>
+            <p>Intelligent RAG Assistant powered by AI</p>
+        </div>
+
+        <div class="card">
+            <div class="input-group">
+                <label><i class="fas fa-link"></i> Add Knowledge Source</label>
+                <div class="input-wrapper">
+                    <input type="url" id="urlInput" placeholder="Enter URL (e.g., https://example.com)" autocomplete="off">
+                    <button onclick="addUrl()">
+                        <i class="fas fa-plus"></i>
+                        Add URL
+                    </button>
+                </div>
+            </div>
+            <div id="urlResponse"></div>
+        </div>
+
+        <div class="card">
+            <div class="input-group">
+                <label><i class="fas fa-question-circle"></i> Ask a Question</label>
+                <div class="input-wrapper">
+                    <input type="text" id="questionInput" placeholder="What would you like to know?" autocomplete="off">
+                    <button onclick="askQuestion()">
+                        <i class="fas fa-paper-plane"></i>
+                        Ask
+                    </button>
+                </div>
+            </div>
+            <div class="loading" id="loadingIndicator">
+                <div class="loading-spinner"></div>
+                <span>Processing your request...</span>
+            </div>
+            <div id="questionResponse"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
